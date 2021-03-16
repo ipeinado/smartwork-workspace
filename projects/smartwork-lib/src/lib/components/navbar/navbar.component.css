@@ -1,0 +1,10 @@
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: yellow;
+    position: fixed;
+}
+
+.navbar svg {
+    width: 140px;
+}

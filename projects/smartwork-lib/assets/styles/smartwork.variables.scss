@@ -1,0 +1,26 @@
+$body-bg: #f2f2f2;
+$body-color: #111;
+
+$primary: #325e6d;
+$secondary: #676766;
+$success: #298240;
+$danger: #000000;
+$warning: #d64309;
+$info: #1f4b5a;
+$highlight: #00a0c8;
+
+$theme-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"success": $success,
+	"danger": $danger,
+	"warning": $warning,
+	"info": $info,
+	"highlight": $highlight
+);
+
+// navbar values
+$navbar-dark-color: rgba(255, 255, 255, .8);
+$navbar-dark-hover-color: #fff;
+
+$dropdown-link-color: $secondary;

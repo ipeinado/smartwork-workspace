@@ -14,10 +14,24 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@angular/*": [
+        "./node_modules/@angular/*"
+      ],
+      "smartwork-lib": [
+        "dist/smartwork-lib/smartwork-lib",
+        "dist/smartwork-lib"
+      ],
+      "vendors": [
+        "dist/vendors/vendors",
+        "dist/vendors"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": true,
+    "enableIvy": false
   }
 }
