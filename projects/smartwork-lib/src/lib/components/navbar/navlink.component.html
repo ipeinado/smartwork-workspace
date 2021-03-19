@@ -1,1 +1,16 @@
-<p>Navlink works</p>
+<a [ngClass]="this.hasSubmenu ? 'nav-link dropdown-toggle' : 'nav-link'"
+   routerLink="{{link.url}}" 
+   role="button" 
+   [attr.data-toggle]="this.hasSubmenu" 
+   [attr.aria-haspopup]="this.hasSubmenu" 
+   [attr.aria-expanded]="this.submenuExpanded"
+   (click)="toggleMenu()"
+   (blur)="onDropdownBlur()"
+   (keydown)="onKeydown($event)"
+>
+    {{ link.label }}
+    <span *ngIf="link.value">{{link.value}}</span>
+  </a>
+  <div *ngIf="this.hasSubmenu" [hidden]="!this.submenuExpanded" class="dropdown-menu">
+      <a class="dropdown-item" *ngFor="let sublink of link.submenu" href="{{link.url}}">{{link.label}}</a>
+  </div>

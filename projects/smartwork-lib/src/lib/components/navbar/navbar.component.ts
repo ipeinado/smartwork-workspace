@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NavLink } from './navlink';
 
 @Component({
   selector: 'smartwork-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
+  @Input() links: Array<NavLink> = [];
+  
+  menuExpanded: boolean = true;
 
-  constructor() {
-    console.log('It is working')  
+  toggleNavigation() {
+    this.menuExpanded = !this.menuExpanded;
   }
-
-  ngOnInit(): void {
-  }
-
 }

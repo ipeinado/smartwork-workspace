@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar.component';
 import { NavlinkComponent } from './navlink.component';
 
@@ -9,10 +10,12 @@ import { NavlinkComponent } from './navlink.component';
     NavlinkComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    RouterModule
   ]
 })
 export class NavbarModule { }
