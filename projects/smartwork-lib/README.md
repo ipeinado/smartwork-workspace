@@ -2,23 +2,17 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
 
-## Code scaffolding
+## Installing
+```npm install smartwork-lib --save````
 
-Run `ng generate component component-name --project smartwork-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project smartwork-lib`.
-> Note: Don't forget to add `--project smartwork-lib` or else it will be added to the default project in your `angular.json` file. 
+Also, make sure to add the css styles to your angular.json
 
-## Build
+````
+...
+"styles": [
+    "node_modules/smartwork-lib/assets/styles/smartwork.theme.scss",
+    "src/styles.scss"
+]
+...
+````
 
-Run `ng build smartwork-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build smartwork-lib`, go to the dist folder `cd dist/smartwork-lib` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test smartwork-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
