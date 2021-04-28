@@ -25,19 +25,22 @@
     background-color: #fff;;
 
     .prefsEditor-buttons {
-        width: auto;
-        height: auto;
-        box-shadow: 2px 2px 3px 0 #6f6f6f;
-        border-bottom: 1px solid #ccc;
-        border-left: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
         background-color: #fff;
-        min-height: 2rem;
-        margin-right: 2rem;
-        display: block;
-        float: right;
+
+        @media screen and (min-width: 992px) {
+            width: auto;
+            height: auto;
+            box-shadow: 2px 2px 3px 0 #6f6f6f;
+            border-bottom: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            min-height: 2rem;
+            margin-right: 2rem;
+            display: block;
+            float: right;
+        }
     }
 
     .prefsEditor-buttons .prefsEditor-reset,
@@ -63,20 +66,28 @@
     }
 
     .prefsEditor-buttons .prefsEditor-reset {
-        flex-shrink: 1;
+        // flex-shrink: 1;
 
         @media screen and (min-width: 40em) {
+            flex-shrink: 1;
             padding-left: .8rem;
             margin-right: .5rem;
         }
     }
 
+    .prefsEditor-buttons .prefsEditor-showHide[aria-pressed=false] {
+        @media screen and (max-width: 991px) {
+            width: 100%;
+        }
+    }
+
     .prefsEditor-buttons .prefsEditor-showHide {
-        flex-grow: 1;
-        flex-shrink: 2;
+        
         text-align: left;
 
         @media screen and (min-width: 40em) {
+            flex-grow: 1;
+            flex-shrink: 2;
             margin: 0 .5rem;
         }
     }
