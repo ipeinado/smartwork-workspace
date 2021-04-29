@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { TranslateService } from '@ngx-translate/core';
+import { TranslationService } from '../../../services/translation.service';
 
 interface Preferences {
   fontSize: number,
@@ -30,6 +32,8 @@ export class UIOptionsComponent implements OnInit {
   public preferences:Preferences;
   private baseFontSize: number;
   private baseLineHeight: number;
+
+  // GOODBYE="CACAFUTI";
 
   preferencesHaveChanged(preferences): boolean {
     return JSON.stringify(preferences) === this.cookieService.get('flc-preferences');
@@ -163,7 +167,21 @@ export class UIOptionsComponent implements OnInit {
     }
   }
 
-  constructor(private cookieService: CookieService) {
+  constructor(
+    private cookieService: CookieService,
+    private translationService: TranslationService,
+    private translateService: TranslateService
+  ) {
+/*     // this language will be used as a fallback when a translation isn't found in the current language
+    this.translate.setDefaultLang('en');
+    // the lang to use, if hte lang isn't available
+    translate.use('en'); */
+
+    this.translateService.setDefaultLang('en');
+    this.translateService.use('en').subscribe(() => {
+      this.translationService.init('en');
+    });
+
     this.baseFontSize = Number(window.getComputedStyle(document.body).getPropertyValue('font-size').match(/\d+/)[0])
     this.preferences = cookieService.check('flc-preferences') ? JSON.parse(cookieService.get('flc-preferences')) : defaultPreferences;
    }

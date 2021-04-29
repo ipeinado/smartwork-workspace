@@ -1,15 +1,15 @@
 <div class="sliding-panel" id="prefs-sliding-panel" aria-label="User Preferences" role="group" [ngStyle]="{'height': visible ? '' : 0}">
     <ul class="prefEditor-panels">
 
-        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="Font size" description="Adjust text size">
+        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="fontsize.title" description="fontsize.description">
             <uio-textfield-stepper [(value)]="preferences.fontSize" [step]=0.2 [min]=0.6 [max]=2 (valueChange)="changeFontSize($event)"></uio-textfield-stepper>
         </li>
 
-        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="Line spacing" description="Adjust the spacing between lines of text">
+        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="linespacing.title" description="linespacing.description">
             <uio-textfield-stepper [(value)]="preferences.lineSpacing" [step]=0.2 [min]=0.6 [max]=2 (valueChange)="changeLineSpacing($event)"></uio-textfield-stepper>
         </li>
 
-        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="Text style" description="Change the font used">
+        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="textstyle.title" description="textstyle.description">
             <select id="text-style-select" (change)="changeTextStyle($event)">
                 <option value="default" [attr.selected]="preferences.textStyle === 'default' ? true : null">Default</option>
                 <option value="tnr" [attr.selected]="preferences.textStyle === 'tnr' ? true : null">Times New Roman</option>
@@ -19,15 +19,15 @@
             </select>
         </li>
 
-        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="Contrast" description="Change text and background colours">
+        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="contrast.title" description="contrast.description">
             <smartwork-theme-picker [(theme)]="preferences.contrast" (themeChanged)="changeContrast($event)"></smartwork-theme-picker>
         </li>
 
-        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="Table of contents" description="Create a table of contents">
+        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="toc.title" description="toc.description">
             <uio-switch [(checked)]="preferences.tocEnabled" (checkedChange)="toggleToC($event)"></uio-switch>
         </li>
 
-        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="Enhance inputs" description="Emphasize links, buttons, menus, textfields, and other inputs">
+        <li class="flc-prefsEditor-panel fl-prefsEditor-panel" app-prefs-editor-panel title="enhanceinputs.title" description="enhanceinputs.description">
             <uio-switch [checked]="preferences.enhancedInputs" (checkedChange)="toggleInputs($event)"></uio-switch>
         </li>
     </ul>
@@ -35,7 +35,7 @@
 <div class="panel-bar">
     <span class="prefsEditor-buttons">
         <button id="reset" class="prefsEditor-reset" aria-controls="prefs-sliding-panel" role="button" *ngIf="visible" (click)="resetPreferences()">
-            <span class="icon-undo"></span>Reset
+            <span class="icon-undo"></span>{{ 'reset' | translate }}
         </button>
         <button 
             id="show-hide" 
@@ -45,7 +45,7 @@
             [attr.aria-expanded]="visible"
             aria-controls="prefs-sliding-panel"
             (click)="togglePanel()">
-            {{ visible ? '- Hide preferences' : '+ Show preferences' }}
+                {{ (visible ? 'hidePreferences' : 'showPreferences') | translate }} 
         </button>
     </span>
 </div>
