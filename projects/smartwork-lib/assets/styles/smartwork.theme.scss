@@ -39,7 +39,11 @@ nav.navbar {
   background-color:$primary;
 }
 
-.nav-link {
+.navbar-brand {
+    padding-top: 0 !important;
+}
+
+/* .nav-link {
   color: rgba(255, 255, 255, .8);
 }
 
@@ -59,7 +63,7 @@ nav.navbar {
     .navbar-nav {
         margin-top: 14px;
     }
-  }
+  } */
 
 .fl-font-cs, .fl-font-cs * {
     font-family: 'Comic Sans MS', sans-serif !important;
@@ -104,6 +108,10 @@ nav.navbar {
 
     ui-options {
         background-color: transparent !important;
+    }
+
+    .info-widget-data-measurement circle-progress {
+        color: #000;
     }
 }
 

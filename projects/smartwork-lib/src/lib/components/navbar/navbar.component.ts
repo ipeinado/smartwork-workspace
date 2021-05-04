@@ -40,7 +40,6 @@ export class NavbarComponent {
     this._ipc.send('logout');
   }
 
-
   toggleNavigation() {
     this.menuExpanded = !this.menuExpanded;
   }
