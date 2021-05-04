@@ -33,8 +33,6 @@ export class UIOptionsComponent implements OnInit {
   private baseFontSize: number;
   private baseLineHeight: number;
 
-  // GOODBYE="CACAFUTI";
-
   preferencesHaveChanged(preferences): boolean {
     return JSON.stringify(preferences) === this.cookieService.get('flc-preferences');
   }

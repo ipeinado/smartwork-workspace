@@ -26,17 +26,40 @@ $navbar-dark-hover-color: #fff;
 $dropdown-link-color: $secondary;
 
 :root {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
 
 body {
-    background-color: $body-bg;
+  background-color: $body-bg;
 }
 
 nav.navbar {
-    background-color:$primary;
+  background-color:$primary;
 }
+
+.nav-link {
+  color: rgba(255, 255, 255, .8);
+}
+
+.navbar-brand img {
+  width: 166px;
+}
+  
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8);
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,1);
+  }
+  
+  @media (min-width: 768px) {
+    .navbar-nav {
+        margin-top: 14px;
+    }
+  }
 
 .fl-font-cs, .fl-font-cs * {
     font-family: 'Comic Sans MS', sans-serif !important;
@@ -78,6 +101,10 @@ nav.navbar {
     .switchUI-controlKnob {
         background-color: #000 !important;
     }
+
+    ui-options {
+        background-color: transparent !important;
+    }
 }
 
 .fl-theme-wb, .fl-theme-wb *, .fl-preview-theme.fl-theme-wb, .fl-theme-wb div, .fl-theme-wb input, .fl-theme-wb h1, .fl-theme-wb h2, .fl-theme-wb h3, .fl-theme-wb h4, .fl-theme-wb h5, .fl-theme-wb h6 {
@@ -105,6 +132,10 @@ nav.navbar {
 
     .switchUI-controlKnob {
         background-color: #fff !important;
+    }
+
+    ui-options {
+        background-color: transparent !important;
     }
 }
 
@@ -134,6 +165,10 @@ nav.navbar {
     .switchUI-controlKnob {
         background-color: #000 !important;
     }
+
+    ui-options {
+        background-color: transparent !important;
+    }
 }
 
 .fl-theme-yb, .fl-theme-yb *, .fl-preview-theme.fl-theme-yb, .fl-theme-yb div, .fl-theme-yb input, .fl-theme-yb h1, .fl-theme-yb h2, .fl-theme-yb h3, .fl-theme-yb h4, .fl-theme-yb h5, .fl-theme-yb h6 {
@@ -162,6 +197,10 @@ nav.navbar {
     .switchUI-controlKnob {
         background-color: #ff0 !important;
     }
+
+    ui-options {
+        background-color: transparent !important;
+    }
 }
 
 .fl-theme-lgdg, .fl-theme-lgdg *, .fl-preview-theme.fl-theme-lgdg, .fl-theme-lgdg div, .fl-theme-lgdg input, .fl-theme-lgdg h1, .fl-theme-lgdg h2, .fl-theme-lgdg h3, .fl-theme-lgdg h4, .fl-theme-lgdg h5, .fl-theme-lgdg h6 {
@@ -189,6 +228,10 @@ nav.navbar {
 
     .switchUI-controlKnob {
         background-color: #bdbdbb !important;
+    }
+
+    ui-options {
+        background-color: transparent !important;
     }
 }
 
@@ -224,6 +267,10 @@ nav.navbar {
         font-weight: bold !important;
         background-color: #fff !important;
     }
+
+    ui-options {
+        background-color: transparent !important;
+    }
 }
 
 .fl-theme-gd, .fl-theme-gd *, .fl-preview-theme.fl-theme-gd, .fl-theme-gd div, .fl-theme-gd input, .fl-theme-gd h1, .fl-theme-gd h2, .fl-theme-gd h3, .fl-theme-gd h4, .fl-theme-gd h5, .fl-theme-gd h6 {
@@ -258,6 +305,10 @@ nav.navbar {
         font-weight: bold !important;
         background-color: #222 !important;
     }
+
+    ui-options {
+        background-color: transparent !important;
+    }
 }
 
 .fl-theme-bbr, .fl-theme-bbr *, .fl-preview-theme.fl-theme-bbr, .fl-theme-bbr div, .fl-theme-bbr input, .fl-theme-bbr h1, .fl-theme-bbr h2, .fl-theme-bbr h3, .fl-theme-bbr h4, .fl-theme-bbr h5, .fl-theme-bbr h6 {
@@ -291,6 +342,10 @@ nav.navbar {
         color: #009 !important;
         font-weight: bold !important;
         background-color: #b96 !important;
+    }
+
+    ui-options {
+        background-color: transparent !important;
     }
 }
 
