@@ -146,6 +146,10 @@ nav.navbar {
         background-color: #fff !important;
     }
 
+    .info-widget-data-measurement circle-progress circle {
+        stroke: #333;
+    }
+
     .info-widget-data-measurement circle-progress path {
         stroke: #fff;
     }
@@ -186,6 +190,10 @@ nav.navbar {
         background-color: transparent !important;
     }
 
+    .info-widget-data-measurement circle-progress {
+        stroke: rgba(0,0,0, .3)
+    }
+
     #smartwork-logo {
         filter: invert(1);
     }
@@ -216,6 +224,18 @@ nav.navbar {
 
     .switchUI-controlKnob {
         background-color: #ff0 !important;
+    }
+
+    .info-widget-data-measurement circle-progress circle {
+        stroke: rgba(255, 255, 0, .3);
+    }
+
+    .info-widget-data-measurement circle-progress path {
+        stroke: #ff0;
+    }
+    
+    .info-widget-data-measurement circle-progress text tspan {
+        fill: #ff0;
     }
 
     ui-options {
@@ -257,6 +277,18 @@ nav.navbar {
     #smartwork-logo {
         filter: contrast(0.4);
     }
+
+    .info-widget-data-measurement circle-progress circle {
+        stroke: rgba(189, 189, 187, .3);
+    }
+
+    .info-widget-data-measurement circle-progress path {
+        stroke: #bdbdbb;
+    }
+    
+    .info-widget-data-measurement circle-progress text tspan {
+        fill: #bdbdbb;
+    }
 }
 
 .fl-theme-gw, .fl-theme-gw *, .fl-preview-theme.fl-theme-gw, .fl-theme-gw div, .fl-theme-gw input, .fl-theme-gw h1, .fl-theme-gw h2, .fl-theme-gw h3, .fl-theme-gw h4, .fl-theme-gw h5, .fl-theme-gw h6 {
@@ -294,6 +326,22 @@ nav.navbar {
 
     ui-options {
         background-color: transparent !important;
+    }
+
+    #smartwork-logo {
+        filter: invert(1) opacity(0.5);
+    }
+
+    .info-widget-data-measurement circle-progress circle {
+        stroke: rgba(108, 108, 108, .3);
+    }
+
+    .info-widget-data-measurement circle-progress path {
+        stroke: #6c6c6c;
+    }
+    
+    .info-widget-data-measurement circle-progress text tspan {
+        fill: #6c6c6c;
     }
 }
 
@@ -333,6 +381,22 @@ nav.navbar {
     ui-options {
         background-color: transparent !important;
     }
+
+    #smartwork-logo {
+        filter: opacity(0.5);
+    }
+
+    .info-widget-data-measurement circle-progress circle {
+        stroke: rgba(136, 136, 136, .3);
+    }
+
+    .info-widget-data-measurement circle-progress path {
+        stroke: #222;
+    }
+    
+    .info-widget-data-measurement circle-progress text tspan {
+        fill: #222;
+    }
 }
 
 .fl-theme-bbr, .fl-theme-bbr *, .fl-preview-theme.fl-theme-bbr, .fl-theme-bbr div, .fl-theme-bbr input, .fl-theme-bbr h1, .fl-theme-bbr h2, .fl-theme-bbr h3, .fl-theme-bbr h4, .fl-theme-bbr h5, .fl-theme-bbr h6 {
@@ -370,6 +434,22 @@ nav.navbar {
 
     ui-options {
         background-color: transparent !important;
+    }
+
+    #smartwork-logo {
+        filter: invert(1);
+    }
+
+    .info-widget-data-measurement circle-progress circle {
+        stroke: rgba(0, 0, 0, .3);
+    }
+
+    .info-widget-data-measurement circle-progress path {
+        stroke: #000;
+    }
+    
+    .info-widget-data-measurement circle-progress text tspan {
+        fill: #000;
     }
 }
 
