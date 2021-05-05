@@ -110,8 +110,12 @@ nav.navbar {
         background-color: transparent !important;
     }
 
-    .info-widget-data-measurement circle-progress {
-        color: #000;
+    .info-widget-data-measurement circle-progress path {
+        stroke: #000;
+    }
+
+    #smartwork-logo {
+        filter: invert(1);
     }
 }
 
@@ -140,6 +144,10 @@ nav.navbar {
 
     .switchUI-controlKnob {
         background-color: #fff !important;
+    }
+
+    .info-widget-data-measurement circle-progress path {
+        stroke: #fff;
     }
 
     ui-options {
@@ -176,6 +184,10 @@ nav.navbar {
 
     ui-options {
         background-color: transparent !important;
+    }
+
+    #smartwork-logo {
+        filter: invert(1);
     }
 }
 
@@ -240,6 +252,10 @@ nav.navbar {
 
     ui-options {
         background-color: transparent !important;
+    }
+
+    #smartwork-logo {
+        filter: contrast(0.4);
     }
 }
 
