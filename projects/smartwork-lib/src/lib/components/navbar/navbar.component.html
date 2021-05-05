@@ -27,10 +27,10 @@
             {{ 'Services' | translate }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-            <li><a href="#" (click)="goToService('/sites/digiteam/index.html')">DigiTeam</a></li>
+            <li><a href="#" (click)="goToService('digiteam')">DigiTeam</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#" (click)="goToService('/sites/healthyme/index.html')">HealthyMe</a></li>
-            <li><a href="#" (click)="goToService('/sites/admin/index.html')">{{ 'Profile' | translate }}</a></li>
+            <li><a href="#" (click)="goToService('healthyme')">HealthyMe</a></li>
+            <li><a href="#" (click)="goToService('profile')">{{ 'Profile' | translate }}</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -38,7 +38,7 @@
             {{ 'Howdy' | translate }}, {{ username }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="userDropdown">
-            <li><a href="#" (click)="goToService('./sites/admin/index.html')">{{ 'My Profile' | translate }}</a></li>
+            <li><a href="#" (click)="goToService('profile')">{{ 'My Profile' | translate }}</a></li>
             <li><a href="#" (click)="openExternalUrl('http://support.smartworkproject.eu/')">{{ 'Help' | translate }}</a></li>
             <li><a href="#" (click)="openExternalUrl('https://docs.smartworkproject.eu/')">{{ 'User Guide' | translate }}</a></li>
             <li role="separator" class="divider"></li>
