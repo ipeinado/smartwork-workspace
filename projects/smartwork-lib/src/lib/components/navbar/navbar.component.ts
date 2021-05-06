@@ -5,6 +5,7 @@ import { NavLink } from './navlink';
 import { CookieService } from 'ngx-cookie-service';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from '../../services/translation.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'smartwork-navbar',
@@ -28,15 +29,20 @@ export class NavbarComponent {
     });
   }
 
-  goToService(service: string): void {
+  goToService(e, service) {
+    e.preventDefault();
+    // console.log(service);
     this._ipc.send('goToService', service);
   }
 
-  openExternalUrl(url: string): void {
+  openExternalUrl(e, url): void {
+    e.preventDefault();
+    // console.log(url);
     this._ipc.send('openExternalUrl', url);
   }
 
-  logout(): void {
+  logout(e): void {
+    e.preventDefault();
     this._ipc.send('logout');
   }
 
