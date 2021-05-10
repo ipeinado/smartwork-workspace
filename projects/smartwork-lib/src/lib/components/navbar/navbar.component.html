@@ -23,9 +23,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav">
         <li class="dropdown">
+          <a class="dropdown-toggle" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ 'Language ' | translate }}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="languagesDropdown">
+            <li><a href id="english" (click)="changeLanguage($event, 'en')">english</a></li>
+            <li><a href id="portugues" (click)="changeLanguage($event, 'pt')">português</a></li>
+            <li><a href id="dansk" (click)="changeLanguage($event, 'da')">dansk</a></li>
+            <li><a href id="greek" (click)="changeLanguage($event, 'el')">Ελληνικά</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
           <a class="dropdown-toggle" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             {{ 'Services' | translate }}
           </a>
+
           <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
             <li><a href (click)="goToService($event, 'digiteam')">DigiTeam</a></li>
             <li role="separator" class="divider"></li>

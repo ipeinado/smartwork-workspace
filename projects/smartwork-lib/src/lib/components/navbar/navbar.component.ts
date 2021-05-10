@@ -5,7 +5,6 @@ import { NavLink } from './navlink';
 import { CookieService } from 'ngx-cookie-service';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from '../../services/translation.service';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'smartwork-navbar',
@@ -44,6 +43,12 @@ export class NavbarComponent {
   logout(e): void {
     e.preventDefault();
     this._ipc.send('logout');
+  }
+
+  changeLanguage(e, lang):void {
+    e.preventDefault();
+    console.log(lang);
+    this.translateService.use(lang);
   }
 
   toggleNavigation() {
