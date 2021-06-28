@@ -51,6 +51,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="userDropdown">
             <li><a id="profile" (click)="goToService($event, 'profile')">{{ 'My Profile' | translate }}</a></li>
+            <li><a id="stats" (click)="goToService($event, 'stats')">{{ 'Statistics' | translate }}</a></li>
             <li><a href (click)="openExternalUrl($event, 'http://support.smartworkproject.eu/')">{{ 'Help' | translate }}</a></li>
             <li><a href (click)="openExternalUrl($event, 'https://docs.smartworkproject.eu/')">{{ 'User Guide' | translate }}</a></li>
             <li role="separator" class="divider"></li>
